@@ -1,0 +1,1299 @@
+CHANGES
+=======
+
+2014.2
+------
+
+* Add the PXE VendorPassthru interface to PXEDracDriver
+
+2014.2.rc2
+----------
+
+* Clear hash ring cache in get_topic_for*
+
+2014.2.rc1
+----------
+
+* Make hash ring mapping be more consistent
+* Add periodic task to rebuild conductor local state
+* Add "affinity" tracking to nodes and conductors
+* ilo* drivers to use only ilo credentials
+* Update hacking version in test requirements
+* Add a call to management.validate(task)
+* Replace custom lazy loading by stevedore
+* Updated from global requirements
+* Remove useless variable in migration
+* Use DbTestCase as test base when context needed
+* For convention rename the first classmethod parameter to cls
+* Always reset target_power_state in node_power_action
+* Imported Translations from Transifex
+* Stop running check_uptodate in the pep8 testenv
+* Add HashRingManager to wrap hash ring singleton
+* Fix typo in agent validation code
+* Conductor changes target_power_state before starting work
+* Adds openSUSE support for developer documentation
+* Updated from global requirements
+* Remove untranslated PO files
+* Update ironic.conf.sample
+* Remove unneeded context initialization in tests
+* Force the SSH commands to use their default language
+* Add parameter to override locale to utils.execute
+* Refactor PXE clean up tests
+* Updated from global requirements
+* Don't reraise Exceptions from agent driver
+* Add documentation for ironic-dbsync command
+* Do not return 'id' in REST API error messages
+* Separate the agent driver config from the base localrc config
+* pxe_ilo driver to call iLO set_boot_device
+* Remove redundant context parameter
+* Update docs with new dbsync command
+* Update devstack docs, require Ubuntu 14.04
+* Do not use the context parameter on refresh()
+* Pass ipa-driver-name to agent ramdisk
+* Do not set the context twice when forming RPC objects
+* Make context mandatory when instantiating a RPC object
+* Neutron DHCP implementation to raise exception if no ports have VIF
+* Do not cache auth token in Neutron DHCP provider
+* Imported Translations from Transifex
+* add_node_capability and rm_node_capability unable to save changes to db
+* Updated from global requirements
+* Handle SNMP exception error.PySnmpError
+* Use standard locale in list_partitions
+* node_uuid should not be used to create test port
+* Revert "Revert "Search line with awk itself and avoid grep""
+* Fix code error in pxe_ilo driver
+* Add unit tests for SNMPClient
+* Check whether specified FS is supported
+* Sync the doc with latest code
+* Add a doc note about the vendor_passthru endpoint
+* Import modules for fake IPMINative/iBoot drivers
+* Allow clean_up with missing image ref
+* mock.called_once_with() is not a valid method
+* Fix Devstack docs for zsh users
+* Fix timestamp column migration
+* Update ironic states and documentation
+* Stop using intersphinx
+* Updated from global requirements
+* Remove the objectify decorator
+* Add reserve() and release() to Node object
+* Add uefi boot mode support in IloVirtualMediaIscsiDeploy
+* Don't write python bytecode while testing
+* Support for setting boot mode in pxe_ilo driver
+* Remove bypassing of H302 for gettextutils markers
+* Revert "Search line with awk itself and avoid grep"
+* Search line with awk itself and avoid grep
+* Add list_by_node_id() to Port object
+* Remove unused modules from openstack-common.conf
+* Sync the document with the current implementation
+* Unify the sensor data format
+* Updated from global requirements
+* Deprecate Ironic compute driver and sched manager
+* Log ERROR power state in node_power_action()
+* Fix compute_driver and scheduler_host_manager in install-guide
+* Use oslo.utils instead of ironic.openstack.common
+* Use expected, actual order for PXE template test
+* Fix agent PXE template
+* Translator functions cleanup part 3
+* Translator functions cleanup part 2
+* Imported Translations from Transifex
+* Updated from global requirements
+* Remove XML from api doc samples
+* Update ironic.conf.sample
+* Fix race conditions running pxe_utils tests in parallel
+* Switch to "incubating" doc theme
+* Minor fixes for ipminative console support
+* Translator functions cleanup part 4
+* Translator functions cleanup part 1
+* Remove unnecessary mapping from Agent drivers
+* mock.assert_called_once() is not valid method
+* Use models.TimestampMixin from oslo.db
+* Updated from global requirements
+
+2014.2.b3
+---------
+
+* Driver merge review comments from 111425
+* Nova review updates for _node_resource
+* Ignore backup files
+* IloVirtualMediaAgent deploy driver
+* IloVirtualMediaIscsi deploy driver
+* Unbreak debugging via testr
+* Interactive console support for ipminative driver
+* Add UEFI based deployment support in Ironic
+* Adds SNMP power driver
+* Control extra space for images conversion in image_cache
+* Use metadata.create_all() to initialise DB schema
+* Fix minor issues in the DRAC driver
+* Add send-data-to-ceilometer support for pxe_ipminative driver
+* Reduce redundancy in conductor manager docstrings
+* Fix typo in PXE driver docstrings
+* Update installation guide for syslinux 6
+* Updated from global requirements
+* Imported Translations from Transifex
+* Avoid deadlock when logging network_info
+* Implements the DRAC ManagementInterface for get/set boot device
+* Rewrite images tests with mock
+* Add boot_device support for vbox
+* Remove gettextutils _ injection
+* Make DHCP provider pluggable
+* DRAC wsman_{enumerate, invoke}() to return an ElementTree object
+* Remove futures from requirements
+* Script to migrate Nova BM data to Ironic
+* Imported Translations from Transifex
+* Updated from global requirements
+* Fix unit tests with keystoneclient master
+* Add support for interacting with swift
+* properly format user guide in RST
+* Updated from global requirements
+* Fix typo in user-guide.rst
+* Add console interface to agent_ipmitool driver
+* Add support for creating vfat and iso images
+* Check ERROR state from driver in _do_sync_power_state
+* Set PYTHONHASHSEED for venv tox environment
+* Add iPXE Installation Guide documentation
+* Add management interface for agent drivers
+* Add driver name on driver load exception
+* Take iSCSI deploy out of pxe driver
+* Set ssh_virt_type to vmware
+* Update nova driver's power_off() parameters
+* return power state ERROR instead of an exception
+* handle invalid seamicro_api_version
+* Imported Translations from Transifex
+* Nova ironic driver review update requests to p4
+* Allow rebuild of node in ERROR and DEPLOYFAIL state
+* Use cache in node_is_available()
+* Query full node details and cache
+* Add in text for text mode on trusty
+* Add Parallels virtualisation type
+* IPMI double bridging functionality
+* Add DracDriver and its DracPower module
+* use MissingParameterValue exception in iboot
+* Update compute driver macs_for_instance per docs
+* Update DevStack guide when querying the image UUID
+* Updated from global requirements
+* Fix py3k-unsafe code in test_get_properties()
+* Fix tear_down a node with missing info
+* Remove d_info param from _destroy_images
+* Add docs for agent driver with devstack
+* Removes get_port_by_vif
+* Update API document with BootDevice
+* Replace incomplete "ilo" driver with pxe_ilo and fake_ilo
+* Handle all exceptions from _exec_ipmitool
+* Remove objectify decorator from dbapi's {get, register}_conductor()
+* Improve exception handling in console code
+* Use valid exception in start_shellinabox_console
+* Remove objectify decorator from dbapi.update_* methods
+* Add list() to Chassis, Node, Port objects
+* Raise MissingParameterValue when validating glance info
+* Mechanism to cleanup all ImageCaches
+* Driver merge review comments from 111425-2-3
+* Raise MissingParameterValue instead of Invalid
+* Import fixes from the Nova driver reviews
+* Imported Translations from Transifex
+* Use auth_token from keystonemiddleware
+* Make swift tempurl key secret
+* Add method for deallocating networks on reschedule
+* Reduce running time of test_different_sizes
+* Remove direct calls to dbapi's get_node_by_instance
+* Add create() and destroy() to Port object
+* Correct `op.drop_constraint` parameters
+* Use timeutils from one place
+* Add create() and destroy() to Chassis object
+* Add iPXE support for Ironic
+* Imported Translations from Transifex
+* Add posix_ipc to requirements
+* backport reviewer comments on nova.virt.ironic.patcher
+* Move the 'instance_info' fields to GenericDriverFields
+* Migration to oslo.utils library
+* Fix self.fields on API Port object
+* Fix self.fields on API Chassis object
+* Sync oslo.incubator modules
+* Updated from global requirements
+* Expose {set,get}_boot_device in the API
+* Check if boot device is persistent on ipminative
+* Sync oslo imageutils, strutils to Ironic
+* Add charset and engine settings to every table
+* Imported Translations from Transifex
+* Remove dbapi calls from agent driver
+* Fix not attribute '_periodic_last_run'
+* Implements send-data-to-ceilometer
+* Port iBoot PDU driver from Nova
+* Log exception with translation
+* Add ironic-python-agent deploy driver
+* Updated from global requirements
+* Imported Translations from Transifex
+* Clean up calls to get_port()
+* Clean up calls to get_chassis()
+* Do not rely on hash ordering in tests
+* Update_port should expect MACAlreadyExists
+* Imported Translations from Transifex
+* Adding swift temp url support
+* Push the image cache ttl way up
+* Imported Translations from Transifex
+* SSH virsh to use the new ManagementInterface
+* Split test case in ironic.tests.conductor.test_manager
+* Tune down node_locked_retry_{attempts,interval} config for tests
+* Add RPC version to test_get_driver_properties
+
+2014.2.b2
+---------
+
+* Import fixes from the Nova driver reviews
+* Generalize exception handling in Nova driver
+* Fix nodes left in an incosistent state if no workers
+* IPMINative to use the new ManagementInterface
+* Backporting nova host manager changes into ironic
+* Catch oslo.db error instead of sqlalchemy error
+* Add a test case for DB schema comparison
+* remove ironic-manage-ipmi.filters
+* Implement API to get driver properties
+* Add drivers.base.BaseDriver.get_properties()
+* Implement retry on NodeLocked exceptions
+* SeaMicro to use the new ManagementInterface
+* Import fixes from Nova scheduler reviews
+* Rename/update common/tftp.py to common/pxe_utils.py
+* Imported Translations from Transifex
+* Factor out deploy info from PXE driver
+* IPMITool to use the new ManagementInterface
+* Use mock.assert_called_once_with()
+* Add missing docstrings
+* Raise appropriate errors on duplicate Node, Port and Chassis creation
+* Add IloDriver and its IloPower module
+* Add methods to ipmitool driver
+* Use opportunistic approach for migration testing
+* Use oslo.db library
+* oslo.i18n migration
+* Import a few more fixes from the Nova driver
+* Set a more generous default image cache size
+* Fix wrong test fixture for Node.properties
+* Make ComputeCapabilitiesFilter work with Ironic
+* Add more INFO logging to ironic/common/service.py
+* Clean up nova virt driver test code
+* Fix node to chassis and port to node association
+* Allow Ironic URL from config file
+* Imported Translations from Transifex
+* Update webapi doc with link and console
+* REST API 'limit' parameter to only accept positive values
+* Update docstring for api...node.validate
+* Document 'POST /v1/.../vendor_passthru'
+* ManagementInterface {set, get}_boot_device() to support 'persistent'
+* Use my_ip for neutron URL
+* Updated from global requirements
+* Add more INFO logging to ironic/conductor
+* Specify rootfstype=ramfs deploy kernel parameter
+* Add set_spawn_error_hook to TaskManager
+* Imported Translations from Transifex
+* Updates the Ironic on Devstack dev documentation
+* Simplify error handling
+* Add gettextutils._L* to import_exceptions
+* Fix workaround for the "device is busy" problem
+* Allow noauth for Neutron
+* Minor cleanups to nova virt driver and tests
+* Update nova rebuild to account for new image
+* Updated from global requirements
+* pep8 cleanup of Nova code
+* PEP fixes for the Nova driver
+* Fix glance endpoint tests
+* Update Nova's available resources at termination
+* Fix the section name in CONTRIBUTING.rst
+* Add/Update docstrings in the Nova Ironic Driver
+* Update Nova Ironic Driver destroy() method
+* Nova Ironic driver get_info() to return memory stats in KBytes
+* Updates Ironic Guide with deployment information
+* Add the remaining unittests to the ClientWrapper class
+* Wait for Neutron port updates when using SSHPower
+* Fix 'fake' driver unable to finish a deploy
+* Update "Exercising the Services Locally" doc
+* Fixing hardcoded glance protocol
+* Remove from_chassis/from_nodes from the API doc
+* Prevent updating UUID of Node, Port and Chassis on DB API level
+* Imported Translations from Transifex
+* Do not delete pxe_deploy_{kernel, ramdisk} on tear down
+* Implement security groups and firewall filtering methods
+* Add genconfig tox job for sample config file generation
+* Mock pyghmi lib in unit tests if not present
+* PXE to pass hints to ImageCache on how much space to reclaim
+* Add some real-world testing on DiskPartitioner
+* Eliminate races in Conductor _check_deploy_timeouts
+* Use temporary dir for image conversion
+* Updated from global requirements
+* Move PXE instance level parameters to instance_info
+* Clarify doc: API is admin only
+* Mock time.sleep for the IPMI tests
+* Destroy instance to clear node state on failure
+* Add 'context' parameter to get_console_output()
+* Cleanup virt driver tests and verify final spawn
+* Test fake console driver
+* Allow overriding the log level for ironicclient
+* Virt driver logging improvements
+* ipmitool driver raises DriverLoadError
+* VendorPassthru.validate()s call _parse_driver_info
+* Enforce a minimum time between all IPMI commands
+* Remove 'node' parameter from the validate() methods
+* Test for membership should be 'not in'
+* Replace mknod() with chmod()
+* Factoring out PXE and TFTP functions
+* Let ipmitool natively retry commands
+* Sync processutils from oslo code
+* Driver interface's validate should return nothing
+* Use .png instead of .gif images
+* Fix utils.execute() for consistency with Oslo code
+* remove default=None for config options
+
+2014.2.b1
+---------
+
+* Stop ipmitool.validate from touching the BMC
+* Set instance default_ephemeral_device
+* Add unique constraint to instance_uuid
+* Add node id to DEBUG messages in impitool
+* Remove 'node' parameter from the Console and Rescue interfaces
+* TaskManager: Only support single node locking
+* Allow more time for API requests to be completed
+* Add retry logic to iscsiadm commands
+* Wipe any metadata from a nodes disk
+* Rework make_partitions logic when preserve_ephemeral is set
+* Fix host manager node detection logic
+* Add missing stats to IronicNodeState
+* Update IronicHostManager tests to better match how code works
+* Update Nova driver's list_instance_uuids()
+* Remove 'fake' and 'ssh' drivers from default enabled list
+* Work around iscsiadm delete failures
+* Mock seamicroclient lib in unit tests if not present
+* Cleanup mock patch without `with` part 2
+* Add __init__.py for nova scheduler filters
+* Skip migrations test_walk_versions instead of pass
+* Improving unit tests for _do_sync_power_state
+* Fix AttributeError when calling create_engine()
+* Reuse validate_instance_and_node() Nova ironic Driver
+* Fix the logging message to identify node by uuid
+* Fix concurrent deletes in virt driver
+* Log exceptions from deploy and tear_down
+* PXE driver to validate the requested image in Glance
+* Return the HTTP Location for accepted requestes
+* Return the HTTP Location for newly created resources
+* Fix tests with new keystoneclient
+* list_instances() to return a list of instances names
+* Pass kwargs to ClientWrapper's call() method
+* Remove 'node' parameter from the Power interface
+* Set the correct target versions for the RPC methods
+* Consider free disk space before downloading images into cache
+* Change NodeLocked status code to a client-side error
+* Remove "node" parameter from methods handling power state in docs
+* Add parallel_image_downloads option
+* Synced jsonutils from oslo-incubator
+* Fix chassis bookmark link url
+* Remove 'node' parameter from the Deploy interface
+* Imported Translations from Transifex
+* Remove all mostly untranslated PO files
+* Cleanup images after deployment
+* Fix wrong usage of mock methods
+* Using system call for downloading files
+* Run keepalive in a dedicated thread
+* Don't translate debug level logs
+* Update dev quickstart guide for ephemeral testing
+* Speed up Nova Ironic driver tests
+* Renaming ironicclient exceptions in nova driver
+* Fix bad Mock calls to assert_called_once()
+* Cleanup mock patch without `with` part 1
+* Corrects a typo in RESTful Web API (v1) document
+* Updated from global requirements
+* Clean up openstack-common.conf
+* Remove non-existent 'pxe_default_format' parameter from patcher
+* Remove explicit dependency on amqplib
+* Pin RPC client version min == max
+* Check requested image size
+* Fix 'pxe_preserve_ephemeral' parameter leakage
+* RPC_API_VERSION out of sync
+* Simplify calls to ImageCache in PXE module
+* Implement the reboot command on the Ironic Driver
+* Place root partition last so that it can always be expanded
+* Stop creating a swap partition when none was specified
+* Virt driver change to use API retry config value
+* Implement more robust caching for master images
+* Decouple state inspection and availability check
+* Updated from global requirements
+* Fix ironic node state comparison
+* Add create() and destroy() to Node
+* Fix typo in rpcapi.driver_vendor_passthru
+* Support serial console access
+* Remove 'node' parameter from the VendorPassthru interface
+* Updated from global requirements
+* Synced jsonutils from oslo-incubator
+* Fix chassis-node relationship
+* Implement instance rebuild in nova.virt.driver
+* Sync oslo logging
+* Add ManagementInterface
+* Clean oslo dependencies files
+* Return error immediately if set_console_mode is not supported
+* Fix bypassed reference to node state values
+* Updated from global requirements
+* Port to oslo.messaging
+* Drivers may expose a top-level passthru API
+* Overwrite instance_exists in Nova Ironic Driver
+* Update Ironic User Guide post landing for 41af7d6b
+* Spawn support for TaskManager and 2 locking fixes
+* Document ClusteredComputeManager
+* Clean up calls to get_node()
+* nova.virt.ironic passes ephemeral_gb to ironic
+* Implement list_instance_uuids() in Nova driver
+* Modify the get console API
+* Complete wrapping ironic client calls
+* Add worker threads limit to _check_deploy_timeouts task
+* Use DiskPartitioner
+* Better handling of missing drivers
+* Remove hardcoded node id value
+* cleanup docstring for drivers.utils.get_node_mac_addresses
+* Update ironic.conf.sample
+* Make sync_power_states yield
+* Refactor sync_power_states tests to not use DB
+* Add DiskPartitioner
+* Some minor clean up of various doc pages
+* Fix message preventing overwrite the instance_uuid
+* Install guide for Ironic
+* Refactor the driver fields mapping
+* Imported Translations from Transifex
+* Fix conductor.manager test assertion order
+* Overwriting node_is_available in IronicDriver
+* Sync oslo/common/excutils
+* Sync oslo/config/generator
+* Cherry pick oslo rpc HA fixes
+* Add Ironic User Guide
+* Remove a DB query for get_ports_by_node()
+* Fix missed stopping of conductor service
+* Encapsulate Ironic client retry logic
+* Do not sync power state for new invalidated nodes
+* Make tests use Node object instead of dict
+* Sync object list stuff from Nova
+* Fix Node object version
+* Cleanup running conductor services in tests
+* Factor hash ring management out of the conductor
+* Replace sfdisk with parted
+* Handling validation in conductor consistently
+* JsonPatch add operation on existing property
+* Updated from global requirements
+* Remove usage of Glance from PXE clean_up()
+* Fix hosts mapping for conductor's periodic tasks
+* Supports filtering port by address
+* Fix seamicro power.validate() method definition
+* Update tox.ini to also run nova tests
+* Updated from global requirements
+* Fix messages formatting for _sync_power_states
+* Refactor nova.virt.ironic.driver get_host_stats
+* Use xargs -0 instead of --null
+* Change admin_url help in ironic driver
+* Sync base object code with Nova's
+* Add Node.instance_info field
+* Fix self.fields on API Node object
+* Show maintenance field in GET /nodes
+* Move duplicated _get_node(s)_mac_addresses()
+* Fix grammar in error string in pxe driver
+* Reduce logging output from non-Ironic libraries
+* Open Juno development
+
+2014.1.rc1
+----------
+
+* Fix spelling error in conductor/manager
+* Improved coverage for ironic API
+* Manually update all translated strings
+* Check that all po/pot files are valid
+* If no swap is specified default to 1MB
+* Fix Nova rescheduling tear down problem
+* Remove obsolete po entries - they break translation jobs
+* Add note to ssh about impact on ci testing
+* Adds exact match filters to nova scheduler
+* Clean up IronicNodeStates.update_from_compute_node
+* ironic_host_manager was missing two stats
+* Imported Translations from Transifex
+* Fix seamicro validate() method definition
+* Remove some obsolete settings from DevStack doc
+* Raise unexpected exceptions during destroy()
+* Start using oslosphinx theme for docs
+* Provide a new ComputeManager for Ironic
+* Nova Ironic driver to set pxe_swap_mb in Ironic
+* Fix strings post landing for c63e1d9f6
+* Run periodic_task in a with a dynamic timer
+* Update SeaMicro to use MixinVendorInterface
+* Run ipmi power status less aggressively
+* Avoid API root controller dependency on v1 dir
+* Update Neutron if mac address of the port changed
+* Replace fixtures with mock in test_keystone.py
+* Decrease running time of SeaMicro driver tests
+* Remove logging of exceptions from controller's methods
+* Imported Translations from Transifex
+* Fix missed exception raise in _add_driver_fields
+* Speed up ironic tests
+* Pass no arguments to _wait_for_provision_state()
+* Adds max retry limit to sync_power_state task
+* Updated from global requirements
+* Imported Translations from Transifex
+* Stop incorrectly returning rescue: supported
+* Correct version.py and update current version string
+* Documentation for deploying DevStack /w Ironic
+* Hide rescue interface from validate() output
+* Change set_console_mode() to use greenthreads
+* Fix help string for a glance option
+* Expose API for fetching a single driver
+* Change JsonEncodedType.impl to TEXT
+* Fix traceback hook for avoid duplicate traces
+* Fix 'spacing' parameters for periodic tasks
+* Permit passing SSH keys into the Ironic API
+* Better instance-not-found handling within IronicDriver
+* Make sure auth_url exists and is not versionless
+* Conductor de-registers on shutdown
+* Change deploy validation exception handling
+* Suppress conductor logging of expected exceptions
+* Remove unused method from timeutils
+* Add admin_auth_token option for nova driver
+* Remove redundant nova virt driver test
+* Process public API list as regular expressions
+* Enable pep8 tests for the Nova Ironic Driver
+* Fix typo tenet -> tenant
+* Stop logging paramiko's DEBUG and INFO messages
+* Set boot device to PXE when deploying
+* Driver utils should raise unsupported method
+* Delete node while waiting for deploy
+* Check BMC availability in ipmitool 'validate' method
+* SeaMicro use device parameter for set_boot_device
+* Make the Nova Ironic driver to wait for ACTIVE
+* Fix misspelled impi to ipmi
+* Do not use __builtin__ in python3
+* Use range instead xrange to keep python 3.X compatibility
+* Set the database.connection option default value
+* PXE validate() to fail if no Ironic API URL
+* Improve Ironic Conductor threading & locks
+* Generic MixinVendorInterface using static mapping
+* Conductor logs better error if seamicroclient missing
+* Add TaskManager lock on change port data
+* Nova ironic driver to retry on HTTP 503
+* Mark hash_replicas as experimental
+* do_node_deploy() to use greenthreads
+* Move v1 API tests to separate v1 directory
+* Pin iso8601 logging to WARN
+* Only fetch node once for vif actions
+* Fix how nova ironic driver gets flavor information
+* Imported Translations from Transifex
+* API: Add sample() method to remaining models
+* Import Nova "ironic" driver
+* Remove errors from API documentation
+* Add libffi-dev(el) dependency to quickstart
+* Updated from global requirements
+* Remove redundant default value None for dict.get
+
+2014.1.b3
+---------
+
+* Refactor vendor_passthru to use conductor async workers
+* Fix wrong exception raised by conductor for node
+* Fix params order in assertEqual
+* Sync the log_handler from oslo
+* Fix SeaMicro driver post landing for ba207b4aa0
+* Implements SeaMicro VendorPassThru functionality
+* Implement the SeaMicro Power driver
+* Fix provision_updated_at deserialization
+* Remove jsonutils from test_rpcapi
+* Do not delete a Node which is not powered off
+* Add provision_updated_at to node's resource
+* Prevent a node in maintenance from being deployed
+* Allow clients to mark a node as in maintenance
+* Support preserve_ephemeral
+* Updated from global requirements
+* API: Expose a way to start/stop the console
+* Add option to sync node power state from DB
+* Make the PXE driver understand ephemeral disks
+* Log deploy_utils.deploy() erros in the PXE driver
+* Removing get_node_power_state, bumping RPC version
+* Add timeout for waiting callback from deploy ramdisk
+* Prevent GET /v1/nodes returning maintenance field
+* Suggested improvements to _set_boot_device
+* Move ipminative _set_boot_device to VendorPassthru
+* Sync common db code from Oslo
+* PXE clean_up() to remove the pxe_deploy_key parameter
+* Add support for custom libvirt uri
+* Python 3: replace "im_self" by "__self__"
+* Fix race condition when deleting a node
+* Remove extraneous vim configuration comments for ironic
+* Do not allow POST ports and chassis internal attributes
+* Do not allow POST node's internal attributes
+* Unused 'pxe_key_data' & 'pxe_instance_name' info
+* Add provision_updated_at field to nodes table
+* Exclude nodes in DEPLOYWAIT state from _sync_power_states
+* Sync common config module from Oslo
+* Get rid object model `dict` methods part 4
+* Sync Oslo rpc module to Ironic
+* Clarify and fix the dev-quickstart doc some more
+* Do not use CONF as a default parameter value
+* Simplify locking around acquiring Node resources
+* Improve help strings
+* Remove shebang lines from code
+* Use six.moves.urllib.parse instead of urlparse
+* Add string representation method to MultiType
+* Fix test migrations for alembic
+* Sync Oslo gettextutils module to Ironic
+* NodeLocked returns 503 error status
+* Supports OPERATOR priv level for ipmitool driver
+* Correct assertEqual order from patch e69e41c99fb
+* PXE and SSH validate() method to check for a port
+* Task object as paramater to validate() methods
+* Fix dev-quick-start.rst post landing for 9d81333fd0
+* API validates driver name for both POST and PATCH
+* Sync Oslo service module to Ironic
+* Move ipmitool _set_boot_device to VendorPassthru
+* Use six.StringIO/BytesIO instead of StringIO.StringIO
+* Add JSONEncodedType with enforced type checking
+* Correct PXEPrivateMethodsTestCase.setUp
+* Don't raise MySQL 2013 'Lost connection' errors
+* Use the custom wsme BooleanType on the nodes api
+* Add wsme custom BooleanType type
+* Fix task_manager acquire post landing for c4f2f26ed
+* Add common.service config options to sample
+* Removes use of timeutils.set_time_override
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Replace nonexistent mock assert methods with real ones
+* Log IPMI power on/off timeouts
+* Remove None as default value for dict get()
+* Fix autodoc formatting in pxe.py
+* Fix race condition when changing node states
+* Use StringType from WSME
+* Add testing and doc sections to docs/dev-quickstart
+* Implement _update_neutron in PXE driver
+* Remove _load_one_plugin fallback
+* SSHPower driver support VMware ESXi
+* Make ironic-api not single threaded
+* Remove POST calls in tests for resource creation
+* Add topic to the change_node_maintenance_mode() RPC method
+* Fix API inconsistence when changing node's states
+* Add samples to serve API through Apache mod_wsgi
+* Add git dependency to quickstart docs
+* Add get_console() method
+* Remove unnecessary json dumps/loads from tests
+* Add parameter for filtering nodes by maintenance mode
+* Rename and update ironic-deploy-helper rootwrap
+* Remove tox locale overrides
+* Updated from global requirements
+* Move eventlent monkeypatch out of cmd/
+* Fix misspellings in ironic
+* Ensure parameter order of assertEqual correct
+* Return correct HTTP response codes for create ops
+* Fix broken doc links on the index page
+* Allow to tear-down a node waiting to be deployed
+* Improve NodeLocked exception message
+* Expose 'reservation' field of a node via API
+* Implement a multiplexed VendorPassthru example
+* Fix log and test for NeutronAPI.update_port_dhcp_opts
+* Fix 'run_as_root' parameter check in utils
+* Handle multiple exceptions raised by jsonpatch
+* API tests to check for the return codes
+* Imported Translations from Transifex
+* Move test__get_nodes_mac_addresses
+* Removed duplicated function to create a swap fs
+* Updated from global requirements
+* Add futures to requirements
+* Fix missing keystone option in ironic.conf.sample
+* Adds Neutron support to Ironic
+* Replace CONF.set_default with self.config
+* Fix ssh_port type in _parse_driver_info() from ssh.py
+* Improve handling of invalid input in HashRing class
+* Sync db.sqlalchemy code from Oslo
+* Add lockfile>=0.8 to requirements.txt
+* Remove net_config_template options
+* Remove deploy kernel and ramdisk global config
+* Update docstrings in ssh.py
+* SSHPower driver raises IronicExceptions
+* mock's return value for processutils.ssh_execute
+* API: Add sample() method on Node
+* Update method doc strings in pxe.py
+* Minor documentation update
+* Removed unused exceptions
+* Bump version of sphinxcontrib-pecanwsme
+* Add missing parameter in call to _load_one_plugin
+* Docstrings for ipmitool
+* alembic with initial migration and tests
+* Update RPC version post-landing for 9bc5f92fb
+* ipmitool's _power_status raises IPMIFailure
+
+2014.1.b2
+---------
+
+* Add [keystone_authtoken] to ironic.conf.sample
+* Updated from global requirements
+* Add comment about node.instance_uuid
+* Run mkfs as root
+* Remove the absolute paths from ironic-deploy-helper.filters
+* PXE instance_name is no longer mandatory
+* Remove unused config option - pxe_deploy_timeout
+* Delete the iscsi target
+* Imported Translations from Transifex
+* Fix non-unique tftp dir instance_uuid
+* Fix non-unique pxe driver 'instance_name'
+* Add missing "Filters" section to the ironic-images.filters
+* Use oslo.rootwrap library instead of local copy
+* Replace assertTrue with explicit assertIsInstance
+* Disallow new provision for nodes in maintenance
+* Add RPC method for node maintenance mode
+* Fix keystone get_service_url filtering
+* Use same MANAGER_TOPIC variable
+* Implement consistent hashing of nodes to conductors
+* PXEAndSSH driver lacked vendor_passthru
+* Use correct auth context inside pxe driver
+* sync_power_states handles missing driver info
+* Enable $pybasedir value in pxe.py
+* Correct SSHPowerDriver validate() exceptions
+* API to check the requested power state
+* Improve the node driver interfaces validation output
+* Remove copyright from empty files
+* Make param descriptions more consistent in API
+* Imported Translations from Transifex
+* Fix wrong message of pxe validator
+* Remove unused dict BYTE_MULTIPLIERS
+* Implement API for provisioning
+* API to validate UUID parameters
+* Make chassis_uuid field of nodes optional
+* Add unit tests for get_nodeinfo_list
+* Improve error handling in PXE _continue_deploy
+* Make param names more consistent in API
+* Sync config module from oslo
+* Fix wrong message of MACAlreadyExists
+* Avoid a race when associating instance_uuid
+* Move and rename ValidTypes
+* Convert trycmd() to oslo's processutils
+* Improve error handling in validate_vendor_action
+* Passing nodes more consistently
+* Add 'next' link when GET maximum number of items
+* Check connectivity in SSH driver 'validate' method
+* GET /drivers to show a list of active conductors
+* Improve method to get list of active conductors
+* Refactor /node/<uuid>/state
+* Reworks Chassis validations
+* Reworks Node validations
+* Developer doc index page points to correct API docs
+* Fix auto-generated REST API formatting
+* Method to generate PXE options for Neutron ports
+* Strip '/' from api_url string for PXE driver
+* Add driver interfaces validation
+* Command call should log the stdout and stderr
+* Add prepare, clean_up, take_over methods to deploy
+* PEP8-ify imports in test_ipmitool
+* API: Add sample() method on Port and PortCollection
+* API: Validate and normalize address
+* Handle DBDuplicateEntry on Ports with same address
+* Imported Translations from Transifex
+* removed wrap_exception method from ironic/common/exception.py
+* Rework patch validation on Ports
+* Add JsonPatchType class
+* Change default API auth to keystone-based
+* Clean up duplicated change-building code in objects
+* Add -U to pip install command in tox.ini
+* Updated from global requirements
+* Add config option for # of conductor replicas
+* Port StringType class from WSME trunk
+* Add tools/conf/check_uptodate to tox.ini
+
+2014.1.b1
+---------
+
+* Correct error with unicode mac address
+* Expose created_at/updated_at properties in the REST API
+* Import heartbeat_interval opt in API
+* Add power control to PXE driver
+* Implement sync_power_state periodic task
+* Set the provision_state to DEPLOYFAIL
+* Save PKI token in a file for PXE deploy ramdisk
+* API ports update for WSME 0.5b6 compliance
+* Add heartbeat_interval to new 'conductor' cfg group
+* Add missing hash_partition_exponent config option
+* If no block devices abort deployment
+* Add missing link for drivers resource
+* Apply comments to 58558/4 post-landing
+* Replace removed xrange in Python3
+* Imported Translations from Transifex
+* Use addCleanup() in test_deploy_utils
+* Allow Pecan to use 'debuginfo' response field
+* Do not allow API to expose error stacktrace
+* Add port address unique constraint for sqlite
+* Implement consistent hashing common methods
+* Sync some db changes from Oslo
+* Bump required version of sqlalchemy-migrate
+* Update ironic.conf.sample
+* Import uuidutils unit tests from oslo
+* Allow FakePower to return node objects power_state
+* Adds doc strings to API FunctionalTest class
+* Use oslo's execute() and ssh_execute() methods
+* Remove openstack.common.uuidutils
+* Sync common.context changes from olso
+* Remove oslo uuidutils.is_uuid_like call
+* Remove oslo uuidutils.generate_uuid() call
+* Add troubleshoot option to PXE template
+* Imported Translations from Transifex
+* Add tftp_server pattern in ironic.conf
+* Import HasLength object
+* ipmitool SHOULD accept empty username/password
+* Imported Translations from Transifex
+* Add missing ConfigNotFound exception
+* Imported Translations from Transifex
+* Add hooks to auto-generate REST API docs
+* Imported Translations from Transifex
+* Redefined default value of allowed_rpc_exception_modules
+* Add last_error usage to deploy and teardown methods
+* Support building wheels (PEP-427)
+* Import missing gettext _ to fix Sphinx error
+* sync common.service from oslo
+* sync common.periodic_task from oslo
+* sync common.notifier.* from oslo
+* sync common.log from oslo
+* sync common.local from oslo
+* Sync common utils from Oslo
+* Rename parameters
+* Accessing a subresource that parent does not exist
+* Imported Translations from Transifex
+* Changes power_state and adds last_error field
+* Update openstack/common/lockutils
+* sync common.context from oslo
+* sync common.config.generator from oslo
+* Remove sqlalchemy-migrate 0.7.3 patching
+* Fix integer division compatibility in middleware
+* Fix node lock in PXE driver
+* Imported Translations from Transifex
+* Register API options under the 'api' group
+* Supporting both Python 2 and Python 3 with six
+* Supports get node by instance uuid in API
+* Imported Translations from Transifex
+* Check invalid uuid for get-by-instance db api
+* Fix error handling in ssh driver
+* Replace __metaclass__
+* Supporting both Python 2 and Python 3 with six
+* Pass Ironic API url to deploy ramdisk in PXE driver
+* Remove 'basestring' from objects utils
+* Allows unicode description for chassis
+* Fix a typo in the name of logger method exception
+* Don't use deprecated module commands
+* Comply with new hacking requirements
+* Improve the API doc spec for chassis
+* Improve the API doc spec for node
+* Updated from global requirements
+* Fix i18N compliance
+* Add wrapper for keystone service catalog
+* Fix test node manager
+* Expose /drivers on the API
+* Update mailmap for Joe Gordon
+* Add mailmap file
+* Implement /nodes/UUID/vendor_passthru in the API
+* Add context to TaskManager
+* Regenerate the sample config file
+* Conductors maintan driver list in the DB
+* Group and unify ipmi configurations
+* Fix a few missing i18n
+* Fix status codes in node controller
+* Fix exceptions handling in controllers
+* Updated from global requirements
+* Support uniform MAC address with colons
+* Remove redundant test stubs from conductor/manager
+* Remove several old TODO messages
+* Supports paginate query for two get nodes DB APIs
+* Remove _driver_factory class attribute
+* Fixes RootController to allow URL without version tag
+* Don't allow deletion of associated node
+* Remove duplicated db_api.get_instance() from tests
+* Updated from global requirements
+* Do not use string concatenation for localized strings
+* Remove the NULL state
+* Add DriverFactory
+* Adjust native ipmi default wait time
+* Be more patient with IPMI and BMC
+* Implement db get_[un]associated_nodes
+* Remove unused nova specific files
+* Removes unwanted mox and fixture files
+* Removes stubs from unit tests
+* Remove unused class/file
+* Remove driver validation on node update
+* Consolidates TestCase and BaseTestCase
+* Fix policies
+* Improve error message for ssh
+* Fix datetime format in FakeCache
+* Fix power_state set to python object repr
+* Updated from global requirements
+* Replaces mox with mock for test_deploy_utils
+* Replaces mox with mock in api's unit tests
+* Replaces mox with mock in objects' unit tests
+* Replaces mox with mock for conductor unit tests
+* fix ssh driver exec command issues
+* Fix exceptions error codes
+* Remove obsolete redhat-eventlet.patch
+* Replaces mox with mock for test_utils
+* Replaces mox with mock for ssh driver unit tests
+* Remove nested 'ipmi' dict from driver_info
+* Replace tearDown with addCleanup in unit tests
+* Remove nested 'ssh' dict from driver_info
+* Remove nested 'pxe' dict from driver_info
+* Save and validate deployment key in PXE driver
+* Implement deploy and tear_down conductor methods
+* Use mock to do unit tests for pxe driver
+* Code clean in node controller
+* Use mock to do unit tests for ipminative driver
+* Replaces mox with mock for ipmitool driver unit tests
+* Fix parameter name in wsexpose
+* Rename start_power_state_change to change_node_power_state
+* Mount iSCSI target and 'dd' in PXE driver
+* Add tests for api/utils.py
+* Check for required fields on ports
+* Replace Cheetah with Jinja2
+* Update from global requirements
+* Upgrade tox to 1.6
+* Add API uuid <-> id mapping
+* Doc string and minor clean up for 41976
+* Update error return code to match new Pecan release
+* Add vendor_passthru method to RPC API
+* Integer types support in api
+* Add native ipmi driver
+* API GET to return only minimal data
+* Fix broken links
+* Collection named based on resource type
+* Remove nova specific tests
+* Changes documentation hyperlinks to be relative
+* Replace OpenStack LLC with OpenStack Foundation
+* Force textmode consoles
+* Implemented start_power_state_change In Conductor
+* Updates documentation for tox use
+* Drop setuptools_git dependency
+* Fix tests return codes
+* Fix misused assertTrue in unit tests
+* Prevent updates while state change is in progress
+* Use localisation where user visible strings are used
+* Update only the changed fields
+* Improve parameters validate in PXE driver
+* Rename ipmi driver to ipmitool
+* Remove jsonutils from PXE driver
+* Expose the vendor_passthru resource
+* Driver's validation during node update process implemented
+* Public API
+* Remove references for the 'task_state' property
+* Use 'provision_state' in PXE driver
+* Updating resources with PATCH
+* Add missing unique constraint
+* Fix docstring typo
+* Removed templates directory in api config
+* Added upper version boundry for six
+* Sync models with migrations
+* Optimization reserve and release nodes db api methods
+* Add missing foreign key
+* Porting nova pxe driver to ironic
+* API Nodes states
+* Fix driver loading
+* Move glance image service client from nova and cinder into ironic
+* Implement the root and v1 entry points of the API
+* Expose subresources for Chassis and Node
+* Add checks locked nodes to db api
+* Update the dev docs with driver interface description
+* Add missing tests for chassis API
+* Delete controller to make code easy to read and understood
+* Disable deleting a chassis that contains nodes
+* Update API documentation
+* Add Pagination of collections across the API
+* Fix typo in conductor manager
+* Remove wsme validate decorator from API
+* Add missing tests for ports API
+* Modify is_valid_mac() for support unicode strings
+* Add DB and RPC method doc strings to hook.py
+* Delete unused templates
+* Use fixture from Oslo
+* Move "opportunistic" db migrations tests from Nova
+* Build unittests for nodes api
+* make api test code more readable
+* Add links to API Objects
+* Delete Ironic context
+* Add tests for existing db migrations
+* Add common code from Oslo for db migrations test
+* Remove extra pep8/flake8/pyflakes requirements
+* Sync requirements with OpenStack/requirements
+* Fix up API tests before updating hacking checks
+* Add RPC methods for updating nodes
+* Run extract_messages
+* Keystone authentiation
+* Add serializer param to RPC service
+* Import serialization and nesting from Nova Objects
+* Implement chassis api actions
+* update requires to prevent version cap
+* Change validate() to raise instead of returning T/F
+* Add helpers for single-node tasks
+* Implement port api action
+* Modify gitignore to ignore sqlite
+* Update resource manager for fixed stevedore issue
+* Add dbapi functions
+* Remove suds requirement
+* Sync install_venv_common from oslo
+* Move mysql_engine option to [database] group
+* Re-define 'extra' as dict_or_none
+* Added Python-2.6 to the classifier
+* Rename "manager" to "conductor"
+* Port from nova: Fix local variable 'root_uuid' ref
+* Created a package for API controllers V1
+* Sync requirements with OpenStack/requirements
+* Remove unused APICoverage class
+* Sync fileutils from oslo-incubator
+* Sync strutils from oslo-incubator
+* Add license header
+* Update get_by_uuid function doc in chassis
+* Fix various Python 2.x->3.x compat issues
+* Improve unit tests for API
+* Add Chassis object
+* Add Chassis DB model and DB-API
+* Delete associated ports after deleting a node
+* Virtual power driver is superceded by ssh driver
+* Add conf file generator
+* Refactored query filters
+* Add troubleshoot to baremetal PXE template
+* Add err_msg param to baremetal_deploy_helper
+* Retry the sfdisk command up to 3 times
+* Updated API Spec for new Drivers
+* Improve IPMI's _make_password_file method
+* Remove spurious print statement from update_node
+* Port middleware error handler from ceilometer API
+* Add support for GET /v1/nodes to return a list
+* Add object support to API service
+* Remove the unused plugin framework
+* Improve tests for Node and Port DB objects
+* SSH driver doesn't need to query database
+* Create Port object
+* Add uuid to Port DB model
+* Delete Flask Dependence
+* Writing Error: nodess to nodes
+* Create the Node object
+* Restructuring driver API and inheritance
+* Remove explicit distribute depend
+* Bump version of PBR
+* Remove deleted[_at] from base object
+* Make object actions pass positional arguments
+* Fix relative links in architecture doc
+* Reword architecture driver description
+* Remove duplication from README, add link to docs
+* Port base object from Nova
+* Fix ironic-rootwrap capability
+* Add ssh power manager
+* Prevent IPMI actions from colliding
+* Add TaskManager tests and fix decorator
+* Mocked NodeManager can load and mock real drivers
+* Add docs for task_manager and tests/manager/utils
+* Fix one typo in index.rst
+* Add missing 'extra' field to models.nodes
+* More doc updates
+* Remove the old README
+* More doc updates
+* Minor fixes to sphinx docs
+* Added API v1 Specification
+* Add initial sphinx docs, based on README
+* Initial skeleton for an RPC layer
+* Log configuration values on API startup
+* Don't use pecan to configure logging
+* Move database.backend option import
+* Remove unused authentication CLI options
+* Rename TestCase.flags() to TestCase.config()
+* Copy the RHEL6 eventlet workaround from Oslo
+* Sync new database config group from oslo-incubator
+* Minor doc change for manager and resorce_manager
+* Add support for Sphinx Docs
+* Update IPMI driver to work with resource manager
+* Add validate_driver_info to driver classes
+* Implement Task and Resource managers
+* Update [reserve|release]_nodes to accept a tag
+* More updates to the README
+* Reimplement reserve_nodes and release_nodes
+* Rename the 'ifaces' table to 'ports'
+* Change 'nodes' to use more driver-specific JSON
+* Update driver names and base class
+* Stop creating a new db IMPL for every request
+* Fix double "host" option
+* Sync safe changes from oslo-incubator
+* Sync rpc changes from oslo-incubator
+* Sync log changes from oslo-incubator
+* Sync a rootwrap KillFilter fix from oslo-incubator
+* Sync oslo-incubator python3 changes
+* Add steps to README.rst
+* Fix fake bmc driver
+* move ironic docs to top level for ease of discovery
+* Update the README file development section
+* Add some API definitions to the README
+* Update the distribute dependency version
+* Add information to the project README
+* Fixes test_update_node by testing updated node
+* Fix pep8 errors and make it pass Jenkins tests
+* Update IPMI driver for new base class
+* Add new base and fake driver classes
+* Delete old base and fake classes
+* Add a few fixes for the API
+* Move strong nova depenencies into temporary dir
+* Update IPMI for new DB schema
+* Add unit tests for DB API
+* Remove tests for old DB
+* Add tests for ironic-dbsync
+* Remove ironic_manage
+* Implement GET /node/ifaces/<id> in API
+* Update exception.py
+* Update db models and API
+* Implement skeleton for a new DB backend
+* Remove the old db implementation
+* Implement initial skeleton of a manager service
+* Implement initial draft of a Pecan-based API
+* Fix IPMI tests
+* Move common things to ironic.common
+* Fix failing db and deploy_helper tests
+* un-split the db backend
+* Rename files and fix things
+* Import add'l files from Nova
+* update openstack-common.conf and import from oslo
+* Added .testr.conf
+* Renamed nova to ironic
+* Fixed hacking, pep8 and pyflakes errors
+* Added project infrastructure needs
+* Fix baremetal get_available_nodes
+* Improve Python 3.x compatibility
+* Import and convert to oslo loopingcall
+* baremetal: VirtualPowerDriver uses mac addresses in bm_interfaces
+* baremetal: Change input for sfdisk
+* baremetal: Change node api related to prov_mac_address
+* Remove "undefined name" pyflake errors
+* Remove unnecessary LOG initialisation
+* Define LOG globally in baremetal_deploy_helper
+* Only call getLogger after configuring logging
+* baremetal: Integrate provisioning and non-provisioning interfaces
+* Move console scripts to entrypoints
+* baremetal: Drop unused columns in bm_nodes
+* Remove print statements
+* Delete tests.baremetal.util.new_bm_deployment()
+* Adds Tilera back-end for baremetal
+* Change type of ssh_port option from Str to Int
+* Virtual Power Driver list running vms quoting error
+* xenapi: Fix reboot with hung volumes
+* Make bm model's deleted column match database
+* Correct substring matching of baremetal VPD node names
+* Read baremetal images from extra_specs namespace
+* Compute manager should remove dead resources
+* Add ssh port and key based auth to VPD
+* Add instance_type_get() to virt api
+* Don't blindly skip first migration
+* BM Migration 004: Actually drop column
+* Update OpenStack LLC to Foundation
+* Sync nova with oslo DB exception cleanup
+* Fix exception handling in baremetal API
+* BM Migrations 2 & 3: Fix drop_column statements
+* Remove function redefinitions
+* Move some context checking code from sqlalchemy
+* Baremetal driver returns accurate list of instance
+* Identify baremetal nodes by UUID
+* Improve performance of baremetal list_instances
+* Better error handling in baremetal spawn & destroy
+* Wait for baremetal deploy inside driver.spawn
+* Add better status to baremetal deployments
+* Use oslo-config-2013.1b4
+* Delete baremetal interfaces when their parent node is deleted
+* VirtualPowerDriver catches ProcessExecutionError
+* Don't modify injected_files inside PXE driver
+* Remove nova.db call from baremetal PXE driver
+* Add a virtual PowerDriver for Baremetal testing
+* Recache or rebuild missing images on hard_reboot
+* Use oslo database code
+* Fixes 'not in' operator usage
+* Make sure there are no unused import
+* Enable N302: Import modules only
+* Correct a format string in virt/baremetal/ipmi.py
+* Add REST api to manage bare-metal nodes
+* Baremetal/utils should not log certain exceptions
+* PXE driver should rmtree directories it created
+* Add support for Option Groups in LazyPluggable
+* Remove obsolete baremetal override of MAC addresses
+* PXE driver should not accept empty kernel UUID
+* Correcting improper use of the word 'an'
+* Export the MAC addresses of nodes for bare-metal
+* Break out a helper function for working with bare metal nodes
+* Keep self and context out of error notification payload
+* Tests for PXE bare-metal provisioning helper server
+* Change ComputerDriver.legacy_nwinfo to raise by default
+* fix new N402 errors
+* Remove unused baremetal PXE options
+* Move global service networking opts to new module
+* Fix N402 for nova/virt
+* Cope better with out of sync bm data
+* Fix baremetal VIFDriver
+* CLI for bare-metal database sync
+* attach/detach_volume() take instance as a parameter
+* Convert short doc strings to be on one line
+* Check admin context in bm_interface_get_all()
+* Provide a PXE NodeDriver for the Baremetal driver
+* Refactor periodic tasks
+* Add helper methods to nova.paths
+* Move global path opts in nova.paths
+* Removes unused imports
+* Improve baremetal driver error handling
+* baremetal power driver takes **kwargs
+* Implement IPMI sub-driver for baremetal compute
+* Fix tests/baremetal/test_driver.py
+* Move baremetal options to [BAREMETAL] OptGroup
+* Remove session.flush() and session.query() monkey patching
+* Remove unused imports
+* Removed unused imports
+* Parameterize database connection in test.py
+* Baremetal VIF and Volume sub-drivers
+* New Baremetal provisioning framework
+* Move baremetal database tests to fixtures
+* Add exceptions to baremetal/db/api
+* Add blank nova/virt/baremetal/__init__.py
+* Move sql options to nova.db.sqlalchemy.session
+* Use CONF.import_opt() for nova.config opts
+* Remove nova.config.CONF
+* remove old baremetal driver
+* Remove nova.flags
+* Fix a couple uses of FLAGS
+* Added separate bare-metal MySQL DB
+* Switch from FLAGS to CONF in tests
+* Updated scheduler and compute for multiple capabilities
+* Switch from FLAGS to CONF in nova.virt
+* Make ComputeDrivers send hypervisor_hostname
+* Introduce VirtAPI to nova/virt
+* Migrate to fileutils and lockutils
+* Remove ComputeDriver.update_host_status()
+* Rename imagebackend arguments
+* Move ensure_tree to utils
+* Keep the ComputeNode model updated with usage
+* Don't stuff non-db data into instance dict
+* Making security group refresh more specific
+* Use dict style access for image_ref
+* Remove unused InstanceInfo class
+* Remove list_instances_detail from compute drivers
+* maint: remove an unused import in libvirt.driver
+* Fixes bare-metal spawn error
+* Refactoring required for blueprint xenapi-live-migration
+* refactor baremetal/proxy => baremetal/driver
+* Switch to common logging
+* Make libvirt LoopingCalls actually wait()
+* Imports cleanup
+* Unused imports cleanup (folsom-2)
+* convert virt drivers to fully dynamic loading
+* cleanup power state (partially implements bp task-management)
+* clean-up of the bare-metal framework
+* Added a instance state update notification
+* Update pep8 dependency to v1.1
+* Alphabetize imports in nova/tests/
+* Make use of openstack.common.jsonutils
+* Alphabetize imports in nova/virt/
+* Replaces exceptions.Error with NovaException
+* Log instance information for baremetal
+* Improved localization testing
+* remove unused flag: baremetal_injected_network_template baremetal_uri baremetal_allow_project_net_traffic
+* Add periodic_fuzzy_delay option
+* HACKING fixes, TODO authors
+* Add pybasedir and bindir options
+* Only raw string literals should be used with _()
+* Remove unnecessary setting up and down of mox and stubout
+* Remove unnecessary variables from tests
+* Move get_info to taking an instance
+* Exception cleanup
+* Backslash continuations (nova.tests)
+* Replace ApiError with new exceptions
+* Standardize logging delaration and use
+* remove unused and buggy function from baremetal proxy
+* Backslash continuations (nova.virt.baremetal)
+* Remove the last of the gflags shim layer
+* Implements blueprint heterogeneous-tilera-architecture-support
+* Deleting test dir from a pull from trunk
+* Updated to remove built docs
+* initial commit

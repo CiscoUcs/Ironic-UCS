@@ -1,0 +1,57 @@
+Metadata-Version: 1.1
+Name: ironic
+Version: 2014.2
+Summary: OpenStack Bare Metal Provisioning
+Home-page: http://www.openstack.org/
+Author: OpenStack
+Author-email: openstack-dev@lists.openstack.org
+License: UNKNOWN
+Description: Ironic
+        ======
+        
+        Ironic is an Incubated OpenStack project which aims to provision
+        bare metal machines instead of virtual machines, forked from the
+        Nova Baremetal driver. It is best thought of as a bare metal
+        hypervisor **API** and a set of plugins which interact with
+        the bare metal hypervisors. By default, it will use PXE and IPMI
+        in concert to provision and turn on/off machines, but Ironic
+        also supports vendor-specific plugins which may implement additional
+        functionality.
+        
+        -----------------
+        Project Resources
+        -----------------
+        
+        Project status, bugs, and blueprints are tracked on Launchpad:
+        
+          http://launchpad.net/ironic
+        
+        Developer documentation can be found here:
+        
+          http://docs.openstack.org/developer/ironic
+        
+        Additional resources are linked from the project wiki page:
+        
+          https://wiki.openstack.org/wiki/Ironic
+        
+        Anyone wishing to contribute to an OpenStack project should
+        find plenty of helpful resources here:
+        
+          https://wiki.openstack.org/wiki/HowToContribute
+        
+        All OpenStack projects use Gerrit for code reviews.
+        A good reference for that is here:
+        
+          https://wiki.openstack.org/wiki/GerritWorkflow
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2.6
