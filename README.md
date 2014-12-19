@@ -7,7 +7,19 @@ community.
 
 Installation instructions
 =========================
+* Clone git repo
+    git clone https://github.com/CiscoUcs/Ironic-UCS.git
 
+* Install Ironic 
+    cd Ironic-UCS; python setup.py install
+
+* Update /etc/ironic/ironic.conf.
+
+* Start Ironic-API
+     /usr/bin/python /usr/local/bin/ironic-api -v -d --config-file /etc/ironic/ironic.conf &
+
+* Start Ironic-conductor 
+    /usr/bin/python /usr/local/bin/ironic-conductor -v -d --config-file /etc/ironic/ironic.conf &
 
 Ironic
 ======
