@@ -7,19 +7,45 @@ community.
 
 Installation instructions
 =========================
-* Clone git repo
-    git clone https://github.com/CiscoUcs/Ironic-UCS.git
+Follow the steps available @
+http://docs.openstack.org/developer/ironic/deploy/install-guide.html
+to setup Baremetal service. Install ironic and ironicclient from apt-get
+repository, this takes care of creating ironic user and required directory
+structure.
 
-* Install Ironic 
-    cd Ironic-UCS; python setup.py install
+Follow these stpes to use Cisco version of ironic plugin.
 
-* Update /etc/ironic/ironic.conf.
+Clone git repo of ironic, and ironicclient.
+  git clone https://github.com/CiscoUcs/Ironic-UCS.git
+  git clone https://github.com/CiscoUcs/UCS-python-ironicclinet.git
 
-* Start Ironic-API
-     /usr/bin/python /usr/local/bin/ironic-api -v -d --config-file /etc/ironic/ironic.conf &
+Install ironic 
+  cd Ironic-UCS; python setup.py install
 
-* Start Ironic-conductor 
-    /usr/bin/python /usr/local/bin/ironic-conductor -v -d --config-file /etc/ironic/ironic.conf &
+Install ironic-pythonclient
+  cd UCS-python-ironicclinet; python setup.py install
+
+Update /etc/ironic/ironic.conf.
+
+Start Ironic-API
+  /usr/bin/python /usr/local/bin/ironic-api -v -d \
+     --config-file /etc/ironic/ironic.conf &
+
+Start Ironic-conductor 
+  /usr/bin/python /usr/local/bin/ironic-conductor -v -d \
+    --config-file /etc/ironic/ironic.conf &
+
+
+UCS PySDK
+=========
+The plugin works with UCS PySDK 0.8.1 version. This version of UCS PySDK
+is available @ https://github.com/CiscoUcs/UcsPythonSDK.
+
+
+Known Issues
+============
+Few DEBUG messages in the ironic logs are actually logged as ERROR messages.
+
 
 Ironic
 ======
@@ -58,3 +84,4 @@ All OpenStack projects use Gerrit for code reviews.
 A good reference for that is here:
 
   https://wiki.openstack.org/wiki/GerritWorkflow
+
