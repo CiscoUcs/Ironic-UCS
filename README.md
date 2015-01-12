@@ -27,13 +27,13 @@ Install ironic-pythonclient
 
 Update /etc/ironic/ironic.conf.
 
-Start Ironic-API
-  /usr/bin/python /usr/local/bin/ironic-api -v -d \
-     --config-file /etc/ironic/ironic.conf &
+Start Ironic-API:
+ su -s /bin/sh -c "/usr/bin/python /usr/local/bin/ironic-api -v -d \
+    --config-file /etc/ironic/ironic.conf &" ironic
 
-Start Ironic-conductor 
-  /usr/bin/python /usr/local/bin/ironic-conductor -v -d \
-    --config-file /etc/ironic/ironic.conf &
+Start Ironic-conductor:
+ su -s /bin/sh -c "/usr/bin/python /usr/local/bin/ironic-conductor -v -d \
+    --config-file /etc/ironic/ironic.conf &" ironic
 
 
 UCS PySDK
