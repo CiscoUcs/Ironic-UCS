@@ -15,29 +15,29 @@ structure.
 
 Follow these stpes to use Cisco version of ironic plugin.
 
-Clone git repo of ironic, and ironicclient.
-
+Clone git repo of ironic, and ironicclient:
+-------------------------------------------
   git clone -b Juno https://github.com/CiscoUcs/Ironic-UCS.git
 
   git clone -b Juno https://github.com/CiscoUcs/UCS-python-ironicclinet.git
 
-Install ironic 
-
+Install ironic:
+---------------
   cd Ironic-UCS; python setup.py install
 
-Install ironic-pythonclient
-
+Install ironic-pythonclient:
+----------------------------
   cd UCS-python-ironicclinet; python setup.py install
 
-Update /etc/ironic/ironic.conf.
+  Update /etc/ironic/ironic.conf.
 
 Start Ironic-API:
-
+-----------------
  su -s /bin/sh -c "/usr/bin/python /usr/local/bin/ironic-api -v -d \
     --config-file /etc/ironic/ironic.conf &" ironic
 
 Start Ironic-conductor:
-
+-----------------------
  su -s /bin/sh -c "/usr/bin/python /usr/local/bin/ironic-conductor -v -d \
     --config-file /etc/ironic/ironic.conf &" ironic
 
